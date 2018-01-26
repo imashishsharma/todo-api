@@ -55,7 +55,7 @@ app.delete('/todos/:id', (req, res) => {
         if(!todo){
             return res.status(404).send("ID not found");
         };
-        res.status(200).send(todo);
+        res.status(200).send({todo});
     }).catch((e) => res.status(400).send("Some exception occurred"));
 });
 
