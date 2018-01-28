@@ -10,16 +10,13 @@ beforeEach(populateTodos);
 
 describe('POST /todos', () => {
     it('should add a todo', (done) => {
-        console.log('THIS',this);
-        
-        this.timeout(5000);
         var text = 'Test todo text';
         request(app)
             .post('/todos')
             .send({text})
             .expect(200)
             .expect((res) => {
-                console.log(res.body);                
+                //console.log(res.body);                
                 expect(res.body.text).toBe(text);
             })
             .end((err, res) => {
