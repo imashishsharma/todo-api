@@ -8,4 +8,4 @@ if (env === 'development') {
   process.env.MONGO_URI = 'mongodb://localhost:27017/TodoAppTest';
 }
 
-console.log('Environment -----------', env);
+console.log('Environment ********', env);
